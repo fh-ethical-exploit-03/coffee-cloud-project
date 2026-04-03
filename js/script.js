@@ -325,5 +325,3 @@ document.getElementById('addCoffeeForm').addEventListener('submit', function (ev
     alert('Coffee added successfully!');
 });
 
-
-
