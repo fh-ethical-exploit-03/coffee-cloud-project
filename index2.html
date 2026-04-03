@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee shop website</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-------------------------------- header section starts ---------------------------------->
+
+    <header class="header">
+
+        <a href="#" class="logo">
+            <img src="https://website-cafe-735.s3.ap-south-1.amazonaws.com/logo.png" alt="">
+        </a>
+
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#about">about</a>
+            <a href="#menu">menu</a>
+            <!-- <a href="#review">review</a>
+            <a href="#contact">contact</a> -->
+        </nav>
+
+        <div class="icons">
+            <div class="fas fa-shopping-cart" id="cart-btn"></div>
+            <div class="fas fa-bars" id="menu-btn"></div>
+        </div>
+
+        <div class="cart-items-container">
+            <button class="btn" onclick="openModal1()">Checkout now</button>
+            
+        </div>
+
+        <!-- <button class="btn">Checkout now</button> -->
+        <!-- <a href="#" class="btn">Checkout now</a> -->
+        </div>
+
+    </header>
+<!------------------------------- Checkout Butoon Modal ------------------------------------>
+    <div id="myModal" class="modal1">
+
+        <div class="modal-content1">
+            <span class="close1" onclick="closeModal1()">&times;</span>
+            <h2>Checkout</h2>
+            <form id="checkoutForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+                <label for="contact">Contact:</label>
+                <input type="text" id="contact" name="contact" required><br><br>
+                <label for="payment">Payment Type:</label>
+                <select id="payment" name="payment" required>
+                    <option value="">Select payment type</option>
+                    <option value="credit">Credit Card</option>
+                    <option value="debit">Debit Card</option>
+                    <option value="paypal">PayPal</option>
+                </select><br><br>
+                <table id="cartItems">
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Cart items will be populated here -->
+                    </tbody>
+                </table><br>
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+
+    <!------------------------------------- header section ends -------------------------------->
+
+    <!------------------------------------- home section starts --------------------------------->
+
+    <section class="home" id="home">
+
+        <div class="content">
+            <h3>MAGIC SIP CAFE</h3>
+            <p>Coffee is a beverage brewed from the roasted
+                and ground seeds of the tropical evergreen coffee plant.</p>
+            <a href="#menu" class="btn">Order now</a>
+        </div>
+
+    </section>
+
+    <!------------------------------------- home section ends ------------------------------------->
+
+    <!------------------------------------- about section starts ----------------------------------->
+
+    <section class="about" id="about">
+
+        <h1 class="heading"> <span>about</span> us </h1>
+
+        <div class="row">
+
+            <div class="image">
+                <img src="https://website-cafe-735.s3.ap-south-1.amazonaws.com/about-img.jpeg" alt="">
+            </div>
+
+            <div class="content">
+                <h3>what makes our coffee special?</h3>
+                <p>Welcome to Café Perfection, where coffee is not just a beverage but a work of art! Our commitment to
+                    providing the finest coffee experience sets us apart from the rest.
+                </p>
+                <a href="#" class="btn">learn more</a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!------------------------------------- about section ends ------------------------------------->
+
+    <!----------------------------------   menu section starts ------------------------------------->
+
+    <section class="menu" id="menu">
+
+        <h1 class="heading"> our <span>menu</span> </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <img src="https://website-cafe-735.s3.ap-south-1.amazonaws.com/menu-1.png" alt="">
+                <h3>AMERICANO</h3>
+                <div class="price">$8.99 <span>14.99
+                </span></div>
+                <a href="#" class="btn">add to cart</a>
+                <button class="plus-btn1" onclick="openModal2">+</button>
+            </div>
+
+
+            <div class="box">
+                <img src="https://website-cafe-735.s3.ap-south-1.amazonaws.com/menu-2.png" alt="">
+                <h3>CAPPUCCINO</h3>
+                <div class="price">$8.99 <span>14.99</span></div>
+                <a href="#" class="btn">add to cart</a>
+            </div>
+
+            <div class="box">
+                <img src="https://website-cafe-735.s3.ap-south-1.amazonaws.com/menu-3.png" alt="">
+                <h3>ICED COFFEE</h3>
+                <div class="price">$8.99 <span>14.99</span></div>
+                <a href="#" class="btn">add to cart</a>
+            </div>
+
+            <div class="box">
+                <img src="https://website-cafe-735.s3.ap-south-1.amazonaws.com/menu-4.png" alt="">
+                <h3>LATTE</h3>
+                <div class="price">$13.99 <span>19.99</span></div>
+                <a href="#" class="btn">add to cart</a>
+            </div>
+
+            <div class="box">
+                <img src="https://website-cafe-735.s3.ap-south-1.amazonaws.com/menu-5.png" alt="">
+                <h3>EXPRESSO</h3>
+                <div class="price">$10.99 <span>15.99</span></div>
+                <a href="#" class="btn">add to cart</a>
+            </div>
+
+            <div class="box">
+                <img src="https://website-cafe-735.s3.ap-south-1.amazonaws.com/menu-6.png" alt="">
+                <h3>BLACK COFFEE</h3>
+                <div class="price">$13.99 <span>19.99</span></div>
+                <a href="#" class="btn">add to cart</a>
+            </div>
+            <button class="plus-btn" onclick="openModal()">+</button>
+
+        </div>
+
+        <!-- <button class="scroll-btn left" onclick="scrollLeft()">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="scroll-btn right" onclick="scrollRight()">
+            <i class="fas fa-chevron-right"></i>
+        </button> -->
+
+    </section>
+
+<!------------------------------- Update Coffee Modal ------------------------------------>
+    <div id="MyModal" class="modal2">
+        <div class="modal-content2">
+            <span class="close2" onclick="closeModal2()">&times;</span>
+            <h2>Update Coffee</h2>
+            <form id="updateCoffeeForm">
+                <label for="coffeeName">Coffee Name:</label>
+                <input type="text" id="coffeeName" name="coffeeName" required><br><br>
+                <label for="price">Price:</label>
+                <input type="text" id="price" name="price" required><br><br>
+                <label for="discountedPrice">Discounted Price:</label>
+                <input type="text" id="discountedPrice" name="discountedPrice" required><br><br>
+                <label for="image">Upload Image:</label>
+                <input type="file" id="image" name="image" accept="image/*" required><br><br>
+                <input type="submit" value="Update Coffee">
+            </form>
+        </div>
+    </div>
+
+
+
+<!---------------------------------- AddCoffee Modal ------------------------------------>
+    <div id="Modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Add Coffee</h2>
+            <form id="addCoffeeForm">
+                <label for="coffeeName">Coffee Name:</label>
+                <input type="text" id="coffeeName" name="coffeeName" required><br><br>
+                <label for="price">Price:</label>
+                <input type="text" id="price" name="price" required><br><br>
+                <label for="discountedPrice">Discounted Price:</label>
+                <input type="text" id="discountedPrice" name="discountedPrice" required><br><br>
+                <label for="image">Upload Image:</label>
+                <input type="file" id="image" name="image" accept="image/*" required><br><br>
+                <input type="submit" value="Add Coffee">
+            </form>
+        </div>
+    </div>
+
+    <!------------------------------------- menu section ends -------------------------------------->
+
+
+    <!------------------------------------- review section starts ---------------------------------->
+
+    <!-- <section class="review" id="review">
+
+        <h1 class="heading"> customer's <span>review</span> </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <img src="images/quote-img.png" alt="" class="quote">
+                <p>"I recently visited Café MAGIC SIP CAFE, and it was a delightful experience! The atmosphere was cozy and inviting, with soft jazz music playing in the background. I ordered a caramel macchiato,
+                     and it was the perfect balance of sweet and strong, just the way I like it.</p>
+                <img src="images/JIMIN.jpg" class="user" alt="">
+                <h3>JIMIN</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="images/quote-img.png" alt="" class="quote">
+                <p> The barista was friendly and made the coffee with care.
+
+                    The café had a great selection of pastries and sandwiches, and I couldn't resist trying their almond croissant,
+                     which was flaky and delicious. The staff was attentive, and the service was quick.</p>
+                <img src="images/RASHI.jpg" class="user" alt="">
+                <h3>RASHI</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="images/quote-img.png" alt="" class="quote">
+                <p> I was also pleased to find that the Wi-Fi was fast, making it an excellent spot for getting some work done.
+
+                    Café MAGIC SIP CAFE exceeded my expectations, and I'll definitely 
+                    be returning soon for another coffee and a peaceful escape from the daily grind."</p>
+                <img src="images/TAEHYUNG.jpg" class="user" alt="">
+                <h3>TAEHYUNG</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+
+        </div>
+
+    </section> -->
+
+    <!------------------------------------ review section ends ------------------------------>
+
+    <!------------------------------------ contact section starts -------------------------->
+
+    <!-- <section class="contact" id="contact">
+
+        <h1 class="heading"> <span>contact</span> us </h1>
+
+        <div class="row">
+
+            <iframe class="map" allowfullscreen="" loading="lazy"></iframe>
+
+            <form action="">
+                <h3>get in touch</h3>
+                <div class="inputBox">
+                    <span class="fas fa-user"></span>
+                    <input type="text" placeholder="name">
+                </div>
+                <div class="inputBox">
+                    <span class="fas fa-envelope"></span>
+                    <input type="email" placeholder="email">
+                </div>
+                <div class="inputBox">
+                    <span class="fas fa-phone"></span>
+                    <input type="number" placeholder="number">
+                </div>
+                <input type="submit" value="contact now" class="btn">
+            </form>
+
+        </div>
+
+    </section> -->
+
+    <!---------------------------------- contact section ends --------------------------------->
+
+
+    <!---------------------------------- footer section starts ------------------------------->
+
+    <section class="footer">
+
+        <div class="share">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+        </div>
+
+        <div class="links">
+            <a href="#">home</a>
+            <a href="#">about</a>
+            <a href="#">menu</a>
+            <a href="#">review</a>
+            <a href="#">contact</a>
+        </div>
+
+        <div class="credit">created by <span>ATHARV | RASHI</span> | </div>
+
+    </section>
+
+    <!---------------------------------- footer section ends ------------------------------------>
+
+    <!-- custom js file link  -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
