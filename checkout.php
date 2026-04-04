@@ -2,10 +2,10 @@
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    $servername = "localhost";
-    $username = "atharv";
-    $password = "atharv09";
-    $dbname = "coffees";
+    $servername = "coffee-db.clsem222cqno.ap-south-1.rds.amazonaws.com";
+    $username = "admin";
+    $password = "rashi030504";
+    $dbname = "coffee";
 
     $conn = new mysqli($servername, $username, $password, $dbname);
     if ($conn->connect_error) {

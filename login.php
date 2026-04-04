@@ -1,7 +1,11 @@
 <?php
 session_start();
-$conn = new mysqli("localhost", "atharv", "atharv09", "coffees");
-
+$conn = new mysqli(
+    "coffee-db.clsem222cqno.ap-south-1.rds.amazonaws.com",
+    "admin",
+    "rashi030504",
+    "coffee"
+);
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
     $password = $_POST['password'];
